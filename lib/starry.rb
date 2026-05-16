@@ -137,7 +137,7 @@ module Starry
     end
 
     private def ensure_ascii_only(input)
-      unless input.ascii_only?
+      unless input&.ascii_only?
         raise ParseError, "Input string contains unexpected non-ASCII character."
       end
     end
